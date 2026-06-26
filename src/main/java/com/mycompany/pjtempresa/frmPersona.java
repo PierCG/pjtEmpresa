@@ -46,16 +46,25 @@ public class frmPersona extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+
         lblCodigo.setText("CÓDIGO:");
 
         lblNombre.setText("NOMBRE:");
 
+        btnAgregar.setBackground(new java.awt.Color(204, 255, 204));
+        btnAgregar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         btnAgregar.setText("AGREGAR");
         btnAgregar.addActionListener(this::btnAgregarActionPerformed);
 
+        btnActualizar.setBackground(new java.awt.Color(102, 102, 255));
+        btnActualizar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
         btnActualizar.setText("ACTUALIZAR");
         btnActualizar.addActionListener(this::btnActualizarActionPerformed);
 
+        btnEliminar.setBackground(new java.awt.Color(255, 102, 102));
+        btnEliminar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         btnEliminar.setText("ELIMINAR");
         btnEliminar.addActionListener(this::btnEliminarActionPerformed);
 
@@ -69,27 +78,27 @@ public class frmPersona extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnAgregar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                        .addComponent(btnActualizar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEliminar)
+                        .addGap(25, 25, 25))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(36, 36, 36)
-                                .addComponent(txtgenero, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtgenero, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lblCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(46, 46, 46)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtcodiPerso, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtnombrePerso, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnAgregar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                        .addComponent(btnActualizar)
-                        .addGap(36, 36, 36)
-                        .addComponent(btnEliminar)
-                        .addGap(25, 25, 25))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtcodiPerso, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                                    .addComponent(txtnombrePerso))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,6 +123,7 @@ public class frmPersona extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        tblPersona.setBackground(new java.awt.Color(204, 204, 204));
         tblPersona.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
